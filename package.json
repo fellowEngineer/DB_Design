@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/fellowEngineer/DB_Design/issues"
   },
-  "homepage": "https://github.com/fellowEngineer/DB_Design#readme"
+  "homepage": "https://github.com/fellowEngineer/DB_Design#readme",
+  "dependencies": {
+    "express": "^4.20.0",
+    "mongoosh": "^0.0.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
 }
