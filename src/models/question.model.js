@@ -46,6 +46,9 @@ const QuestionSchema = new Schema({
         ref: 'Stream', // Assuming there is a Stream model
         required: true
     }
+},
+{
+    timestamps: true
 });
 
 

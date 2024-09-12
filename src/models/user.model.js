@@ -69,6 +69,9 @@ const UserSchema = new Schema({
         required: true
     }
 
+},
+{
+    timestamps: true
 })
 
 UserSchema.index({ username: 1 });

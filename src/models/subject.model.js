@@ -24,6 +24,9 @@ const SubjectSchema = new Schema({
         required: true // Ensures this field is always provided
     }
     
+},
+{
+    timestamps: true
 });
 
 

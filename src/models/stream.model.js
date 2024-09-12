@@ -24,6 +24,9 @@ const StreamtSchema = new Schema({
         required: true // Ensures this field is always provided
     }
     
+},
+{
+    timestamps: true
 });
 
 StreamtSchema.index({ stream_name : 1 })

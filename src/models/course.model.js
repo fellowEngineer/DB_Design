@@ -25,6 +25,9 @@ const CourseSchema = new Schema({
     //     required: true
     // } 
     
+},
+{
+    timestamps: true
 });
 
 CourseSchema.index({ course_name: 1 })
