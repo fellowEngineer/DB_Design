@@ -1,10 +1,11 @@
-import {Schema, Model} from "mongoose";
+import { Schema, Model } from "mongoose";
 
 
 const QuestionSchema = new Schema({
     
     question: {
         type: String,
+        trim: true,
         required: true
     },
 
@@ -37,6 +38,8 @@ const QuestionSchema = new Schema({
         required: true
     },
 
+
+    /// this one might not needed
     stream_reff: {
         type: Schema.Types.ObjectId,
         ref: 'Stream', // Assuming there is a Stream model
