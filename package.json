@@ -2,7 +2,7 @@
   "name": "db_design",
   "version": "1.0.0",
   "description": "learn to design database",
-  "type":"module",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js",
@@ -20,7 +20,7 @@
   "homepage": "https://github.com/fellowEngineer/DB_Design#readme",
   "dependencies": {
     "express": "^4.20.0",
-    "mongoosh": "^0.0.7"
+    "mongoose": "^8.6.1"
   },
   "devDependencies": {
     "nodemon": "^3.1.4"
