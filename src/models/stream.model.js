@@ -7,7 +7,8 @@ const StreamtSchema = new Schema({
     stream_name: {
         type: String,
         trim: true, // Removes leading and trailing whitespace
-        required: true // Ensures this field is always provided
+        required: true, // Ensures this field is always provided
+        unique: true
     },
 
     stream_code: {

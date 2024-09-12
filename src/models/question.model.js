@@ -6,7 +6,8 @@ const QuestionSchema = new Schema({
     question: {
         type: String,
         trim: true,
-        required: true
+        required: true,
+        unique: true
     },
 
     options: {
