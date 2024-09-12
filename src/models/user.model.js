@@ -71,7 +71,7 @@ const UserSchema = new Schema({
 
 })
 
-
+UserSchema.index({ username: 1 });
 
 
 const User = new Model("User", UserSchema);

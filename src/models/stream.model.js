@@ -26,6 +26,8 @@ const StreamtSchema = new Schema({
     
 });
 
+StreamtSchema.index({ stream_name : 1 })
+
 
 const Stream = new Model("Stream", StreamtSchema);
 

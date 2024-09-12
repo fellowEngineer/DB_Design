@@ -18,13 +18,16 @@ const CourseSchema = new Schema({
         unique: true // Ensures each subject_code is unique
     },
 
-    enrolled_user_reff:{
-        type: Schema.Types.ObjectId,
-        ref: 'User',
-        required: true
-    } 
+    /// Course might not need this field
+    // enrolled_user_reff:{
+    //     type: Schema.Types.ObjectId,
+    //     ref: 'User',
+    //     required: true
+    // } 
     
 });
+
+CourseSchema.index({ course_name: 1 })
 
 
 const Course = new Model("Course", CourseSchema);

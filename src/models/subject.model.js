@@ -27,6 +27,8 @@ const SubjectSchema = new Schema({
 });
 
 
+SubjectSchema.index({ subject_name: 1 });
+
 const Subject = new Model("Subject", SubjectSchema);
 
 
