@@ -2,25 +2,25 @@ import { Schema, Model } from "mongoose"
 
 
 
-const SubjectSchema = new Schema({
+const StreamtSchema = new Schema({
 
-    subject_name: {
+    stream_name: {
         type: String,
         trim: true, // Removes leading and trailing whitespace
         required: true, // Ensures this field is always provided
         unique: true
     },
 
-    subject_code: {
+    stream_code: {
         type: String,
         trim: true, // Removes leading and trailing whitespace
         required: true, // Ensures this field is always provided
         unique: true // Ensures each subject_code is unique
     },
 
-    stream_ref: {
+    course_ref: {
         type: Schema.Types.ObjectId,
-        ref: 'Stream', // Reference to the Stream model
+        ref: 'Course', // Reference to the Stream model
         required: true // Ensures this field is always provided
     }
     
@@ -29,10 +29,10 @@ const SubjectSchema = new Schema({
     timestamps: true
 });
 
-
-SubjectSchema.index({ subject_name: 1 });
-
-const Subject = new Model("Subject", SubjectSchema);
+StreamtSchema.index({ stream_name : 1 })
 
 
-export default Subject;
+const Stream = new Model("Stream", StreamtSchema);
+
+
+export default Stream;

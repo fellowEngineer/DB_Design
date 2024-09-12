@@ -2,37 +2,38 @@ import { Schema, Model } from "mongoose"
 
 
 
-const SubjectSchema = new Schema({
+const CourseSchema = new Schema({
 
-    subject_name: {
+    course_name: {
         type: String,
         trim: true, // Removes leading and trailing whitespace
         required: true, // Ensures this field is always provided
         unique: true
     },
 
-    subject_code: {
+    course_code: {
         type: String,
         trim: true, // Removes leading and trailing whitespace
         required: true, // Ensures this field is always provided
         unique: true // Ensures each subject_code is unique
     },
 
-    stream_ref: {
-        type: Schema.Types.ObjectId,
-        ref: 'Stream', // Reference to the Stream model
-        required: true // Ensures this field is always provided
-    }
+    /// Course might not need this field
+    // enrolled_user_reff:{
+    //     type: Schema.Types.ObjectId,
+    //     ref: 'User',
+    //     required: true
+    // } 
     
 },
 {
     timestamps: true
 });
 
-
-SubjectSchema.index({ subject_name: 1 });
-
-const Subject = new Model("Subject", SubjectSchema);
+CourseSchema.index({ course_name: 1 })
 
 
-export default Subject;
+const Course = new Model("Course", CourseSchema);
+
+
+export default Course;

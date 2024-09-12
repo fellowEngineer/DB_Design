@@ -6,7 +6,8 @@ const QuestionSchema = new Schema({
     question: {
         type: String,
         trim: true,
-        required: true
+        required: true,
+        unique: true
     },
 
     options: {
@@ -45,6 +46,9 @@ const QuestionSchema = new Schema({
         ref: 'Stream', // Assuming there is a Stream model
         required: true
     }
+},
+{
+    timestamps: true
 });
 
 
