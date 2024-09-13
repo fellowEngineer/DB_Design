@@ -1,5 +1,5 @@
 const getSignUp = (req, res) => {
-    res.Status(2000)
+    res.Status(200)
     .json("A HTML Page Suppose to Render here");
 }
 
@@ -36,11 +36,27 @@ const postSignUp = (req, res) => {
 
 
     DB_SignUP(UserData)
-    .then((reslut) => {
-        console.log("SignUp:SUC: User Registered: ", reslut);
+    .then((result) => {
+        console.log("SignUp:SUC: User Registered: ", result);
+        
+
+        res.Status(200)
+        .json({
+            msg: "SignUp:SUC: User Registered.",
+            result
+        });
+
     })
     .catch((error) => {
         console.log("SignUp:ERR ==> ", error);
+
+
+
+        res.Status(502)
+        .json({
+            msg: "SignUp:ERR",
+            error
+        });
     })
     
 }
