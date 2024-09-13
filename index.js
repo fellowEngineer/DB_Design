@@ -14,9 +14,9 @@ import { SignUp } from "./src/routes/signup.route.js"
 App.use("/signup", SignUp);
 
 
-// /// Login Route
-// import { Login } from "./src/routes/login.route.js"
-// App.use("/login", Login);
+/// Login Route
+import { Login } from "./src/routes/login.route.js"
+App.use("/login", Login);
 
 
 

@@ -11,7 +11,7 @@ const postSignUp = (req, res) => {
     ///this is the place where i should check for allthe data present, validation, etc
     /// then forward to create user into db
 
-    const { username, email, mobile_number, password, first_name, last_name, course_enrolled, stream_enrolled } = req.body; 
+    const { u_username, u_email, u_mobile_number, u_password, u_confirm_password, u_first_name, u_last_name, u_course_enrolled, u_stream_enrolled } = req.body; 
 
 
     /// built something to validete these fields.
@@ -21,17 +21,28 @@ const postSignUp = (req, res) => {
     //     errors.push('Username must be at least 5 characters long, and contain only lowercase letters and numbers.');
     // }
 
+    if(u_password !== u_confirm_password)
+    {
+        res.Status(422)
+        .json(
+            {
+                massage: "InvalidArgumentException.",
+                u_password
+            }
+        )
+    }
+
 
 
     const UserData = {
-        username: username, 
-        email: email, 
-        mobile_number: mobile_number, 
-        password: password, 
-        first_name: first_name, 
-        last_name: last_name, 
-        course_enrolled: course_enrolled, 
-        stream_enrolled: stream_enrolled
+        username: u_username, 
+        email: u_email, 
+        mobile_number: u_mobile_number, 
+        password:u_password, 
+        first_name: u_first_name, 
+        last_name: u_last_name, 
+        course_enrolled: u_course_enrolled, 
+        stream_enrolled: u_stream_enrolled
     }
 
 
