@@ -14,11 +14,13 @@ import { SignUp } from "./src/routes/signup.route.js"
 App.use("/signup", SignUp);
 
 
-/// Login Route
-import { Login } from "./src/routes/login.route.js"
-App.use("/login", Login);
+/// SignIn Route
+import { SignIn } from "./src/routes/signin.route.js"
+App.use("/signin", SignIn);
 
-
+/// Admin Route
+import { Admin } from "./src/routes/admin.route.js"
+App.use("/admin", Admin);
 
 
 
