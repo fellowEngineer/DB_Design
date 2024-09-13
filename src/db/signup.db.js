@@ -8,6 +8,7 @@ const DB_SignUP = async (inp_Data) => {
 
     try {
         const user = await User.create({
+
             username: inp_Data.username, 
             email:inp_Data.email, 
             mobile_number: inp_Data.mobile_number, 
@@ -16,6 +17,7 @@ const DB_SignUP = async (inp_Data) => {
             last_name: inp_Data.last_name, 
             course_enrolled: inp_Data.course_enrolled, 
             stream_enrolled: inp_Data.stream_enrolled
+            
         })
 
         return user;
