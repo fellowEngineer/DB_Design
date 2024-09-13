@@ -67,6 +67,12 @@ const UserSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'Course',
         required: true
+    },
+
+    stream_enrolled: {
+        type: Schema.Types.ObjectId,
+        ref: 'Stream',
+        required: true
     }
 
 },
