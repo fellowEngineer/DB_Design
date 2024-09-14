@@ -27,11 +27,11 @@ const QuestionSchema = new Schema({
         enum: ['A', 'B', 'C', 'D'] // Assuming the answer will be one of these options
     },
 
-    marks: {
-        type: Number,
-        required: true,
-        min: 0 // Assuming marks cannot be negative
-    },
+    // marks: {
+    //     type: Number,
+    //     required: true,
+    //     min: 0 // Assuming marks cannot be negative
+    // },
 
     subject_reff: {
         type: Schema.Types.ObjectId,

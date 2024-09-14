@@ -28,4 +28,11 @@ res.send("Admin: PATCH request IS NOT ALLOWED.");
     res.send("Admin: HEAD request IS NOT ALLOWED.");
 });
 
+
+
+
+import AddQuestion from "./add-question.admin.route.js";
+Admin.route("/add-question", AddQuestion);
+
+
 export default Admin;
