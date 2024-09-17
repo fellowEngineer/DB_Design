@@ -1,5 +1,5 @@
 import bcrypt from "bcryptjs"
-import { User } from "../models/user.model.js";
+import User from "../models/user.model.js";
 
 const DB_SignUP = async (inp_Data) => {
 
