@@ -1,4 +1,4 @@
-import { Schema, Model } from "mongoose"
+import { Schema, model } from "mongoose"
 
 
 // Define possible user roles
@@ -83,6 +83,6 @@ const UserSchema = new Schema({
 UserSchema.index({ username: 1 });
 
 
-const User = new Model("User", UserSchema);
+const User = model("User", UserSchema);
 
 export default User;
