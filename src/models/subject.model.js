@@ -1,4 +1,4 @@
-import { Schema, Model } from "mongoose"
+import { Schema, model } from "mongoose"
 
 
 
@@ -32,7 +32,7 @@ const SubjectSchema = new Schema({
 
 SubjectSchema.index({ subject_name: 1 });
 
-const Subject = new Model("Subject", SubjectSchema);
+const Subject = model("Subject", SubjectSchema);
 
 
 export default Subject;

@@ -1,4 +1,4 @@
-import { Schema, Model } from "mongoose"
+import { Schema, model } from "mongoose"
 
 
 
@@ -33,7 +33,7 @@ const CourseSchema = new Schema({
 CourseSchema.index({ course_name: 1 })
 
 
-const Course = new Model("Course", CourseSchema);
+const Course = model("Course", CourseSchema);
 
 
 export default Course;

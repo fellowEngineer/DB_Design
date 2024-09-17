@@ -9,15 +9,9 @@ const DB_AddQuesion = async (questionData) =>  {
         const subject_id = await getObjectIdFromSubjectName(questionData.subject_name);
         const stream_id = await getObjectIdFromStreamName(questionData.stream_name);
 
-
         const question = {
             question: questionData.question,
-            options: new Map([
-                ['A', 'Paris'],
-                ['B', 'London'],
-                ['C', 'Berlin'],
-                ['D', 'Madrid']
-            ]),
+            options: questionData.options,
             answer_hint: questionData.answer_hint,
             answer: questionData.answer,
             subject_reff: subject_id,
@@ -26,11 +20,11 @@ const DB_AddQuesion = async (questionData) =>  {
 
         const newQuestion = await Question.create(question);
 
-
         return newQuestion
         
     } catch (error) {
-        
+        console.log(error);
+        process.exit(1)
     }
 }
 

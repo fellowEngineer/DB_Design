@@ -1,4 +1,4 @@
-import { Schema, Model } from "mongoose";
+import { Schema, model } from "mongoose";
 
 
 const QuestionSchema = new Schema({
@@ -53,7 +53,7 @@ const QuestionSchema = new Schema({
 
 
 
-const Question = new Model("Question", QuestionSchema);
+const Question = model("Question", QuestionSchema);
 
 
 export default Question;

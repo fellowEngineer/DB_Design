@@ -9,17 +9,22 @@ App.use(express.json());
 App.use(express.urlencoded({ extended: true }));
 
 
+/// Home Route
+// App.use('/',)
+
+
+
 /// SignUp Route
-import { SignUp } from "./src/routes/signup.route.js"
+import SignUp from "./src/routes/signup.route.js"
 App.use("/signup", SignUp);
 
 
 /// SignIn Route
-import { SignIn } from "./src/routes/signin.route.js"
+import SignIn from "./src/routes/signin.route.js"
 App.use("/signin", SignIn);
 
 /// Admin Route
-import { Admin } from "./src/routes/admin.route.js"
+import Admin  from "./src/routes/admin.route.js"
 App.use("/admin", Admin);
 
 
